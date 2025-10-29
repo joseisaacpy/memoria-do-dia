@@ -4,6 +4,8 @@ import "./globals.css";
 
 import { Poppins } from "next/font/google";
 
+import { Toaster } from "@/components/ui/sonner";
+
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
   variable: "--font-poppins",
@@ -21,7 +23,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={` ${poppins.className} antialiased`}>{children}</body>
+      <body className={` ${poppins.className} antialiased`}>
+        {children}
+        {/* Toast Sonner do Shadcn */}
+        <Toaster position="top-right" duration={2000} closeButton={true} />
+      </body>
     </html>
   );
 }
