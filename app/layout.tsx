@@ -6,6 +6,8 @@ import "./globals.css";
 import { Poppins } from "next/font/google";
 // toaster para avisos
 import { Toaster } from "@/components/ui/sonner";
+// importando o footer
+import Footer from "@/components/Footer";
 // criando a fonte
 const poppins = Poppins({
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
@@ -24,10 +26,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={` ${poppins.className} antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         {children}
         {/* Toast Sonner do Shadcn */}
         <Toaster position="top-right" duration={2000} closeButton={true} />
+        <Footer />
       </body>
     </html>
   );
