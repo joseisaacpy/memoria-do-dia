@@ -1,12 +1,9 @@
-// para definir o titulo da pagina
+import LoginClient from "./loginClient";
+
 export const metadata = {
-  title: "Nova Memória",
+  title: "Login",
 };
 
-// importando a pagina
-import HomeClient from "./pageClient";
-
-// retorna a pagina
-export default function Home() {
-  return <HomeClient />;
+export default function LoginPage() {
+  return <LoginClient />;
 }
